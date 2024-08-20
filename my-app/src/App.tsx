@@ -27,6 +27,13 @@ function App() {
         }
     };
 
+    const register = () =>{
+        const data = {username, password};
+         {
+            axios.post(`${SERVER}register/`, data).then(res=> console.log(res.data))
+        }
+    }
+
     // Handle change events for input fields
     const handleUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {
         setUsername(e.target.value);
@@ -49,6 +56,7 @@ function App() {
             </div>
             <div>
                 <button onClick={login}>LOGIN</button>
+                <button onClick={register}>REGISTER</button>
             </div>
             <div>{username} -- {password}</div> {/* Displaying username and password for testing purposes */}
             <hr/>

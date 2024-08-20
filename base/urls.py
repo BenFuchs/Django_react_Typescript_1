@@ -8,6 +8,5 @@ urlpatterns = [
     path('login/', TokenObtainPairView.as_view()),
     path('product/', views.product),
     path('product/<int:id>',views.product),
-
-
+    path('register/', views.register),
 ]
